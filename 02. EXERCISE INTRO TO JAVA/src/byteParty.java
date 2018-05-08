@@ -46,23 +46,23 @@ public class byteParty {
     }
 
     private static void clearBit(short[] numbers, int position) {
-        int mask = ~(1 << position); //reverse the bits of shifted number
+        int mask = ~(1 << position); //NOT operator reverse the bits of shifted number
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] &= mask; //
+            numbers[i] &= mask; // AND operator - returns 1 only if both operands are 1
         }
     }
 
     private static void setBit(short[] numbers, int position) {
         int mask = 1 << position;
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] |= mask; //
+            numbers[i] |= mask; // OR operator - returns 0 only if both operands are 0
         }
     }
 
     private static void flipBit(short[] numbers, int position) {
         int mask = 1 << position;
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] ^= mask; //XOR operand - reverse the target bit
+            numbers[i] ^= mask; //XOR operand - returns 1 only if both operands are different
         }
     }
 }
