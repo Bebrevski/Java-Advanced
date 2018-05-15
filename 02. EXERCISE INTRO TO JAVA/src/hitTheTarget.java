@@ -14,8 +14,8 @@ public class hitTheTarget {
             }
         }
 
-        for (int i = 20; i >= 1; i--) {
-            for (int j = 20; j >= 1; j--) {
+        for (int i = 1; i <= 20; i++) {
+            for (int j = 1; j <= 20; j++) {
                 if (i - j == number) {
                     System.out.printf("%d - %d = %d%n", i, j, i - j);
                 }
