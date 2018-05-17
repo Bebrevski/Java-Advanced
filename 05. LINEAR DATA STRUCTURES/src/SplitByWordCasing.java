@@ -29,10 +29,10 @@ public class SplitByWordCasing {
         printCurrentCollection(upperCaseWords);
     }
 
-    private static void printCurrentCollection(List<String> lowerCaseWords) {
-        for (int i = 0; i < lowerCaseWords.size(); i++) {
-            System.out.print(lowerCaseWords.get(i));
-            if (i != lowerCaseWords.size() - 1) {
+    private static void printCurrentCollection(List<String> collection) {
+        for (int i = 0; i < collection.size(); i++) {
+            System.out.print(collection.get(i));
+            if (i != collection.size() - 1) {
                 System.out.print(", ");
                 continue;
             }
