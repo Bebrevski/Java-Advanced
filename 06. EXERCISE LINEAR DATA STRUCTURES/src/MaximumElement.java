@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
+import java.util.Collections;
 
 public class MaximumElement {
     public static void main(String[] args) throws IOException {
@@ -31,11 +32,7 @@ public class MaximumElement {
                 }
             } else {
                 if (max == Integer.MIN_VALUE){
-                    for (Integer num : stack) {
-                        if (num > max) {
-                            max = num;
-                        }
-                    }
+                    max = Collections.max(stack);
                 }
                 sb.append(max).append(System.lineSeparator());
             }
