@@ -23,9 +23,11 @@ public class FixEmails {
         StringBuilder output = new StringBuilder();
 
         for (Map.Entry<String, String> kvp : record.entrySet()) {
-            boolean forbidden = kvp.getValue().toLowerCase().endsWith("us") ||
-                    kvp.getValue().toLowerCase().endsWith("uk") ||
-                    kvp.getValue().toLowerCase().endsWith("com");
+            String email = kvp.getValue().toLowerCase();
+
+            boolean forbidden = email.endsWith("us") ||
+                                email.endsWith("uk") ||
+                                email.endsWith("com");
 
             if (!forbidden) {
                 output.append(kvp.getKey() + " -> " + kvp.getValue()).append(System.lineSeparator());
