@@ -32,10 +32,11 @@ public class ChessKnight {
             String[] tokens = input.split(" -> ");
             int[] endPosition = Arrays.stream(tokens[1].split("")).mapToInt(Integer::parseInt).toArray();
 
-            boolean legalMove = (startPosition[0] - 2 == endPosition[0] && (startPosition[1] - 1 == endPosition[1] || startPosition[1] + 1 == endPosition[1])) ||
-                    (startPosition[0] + 2 == endPosition[0] && (startPosition[1] - 1 == endPosition[1] || startPosition[1] + 1 == endPosition[1])) ||
-                    (startPosition[1] + 2 == endPosition[1] && (startPosition[0] - 1 == endPosition[0] || startPosition[0] + 1 == endPosition[0])) ||
-                    (startPosition[1] - 2 == endPosition[1] && (startPosition[0] - 1 == endPosition[0] || startPosition[0] + 1 == endPosition[0]));
+            boolean legalMove =
+(startPosition[0] - 2 == endPosition[0] && (startPosition[1] - 1 == endPosition[1] || startPosition[1] + 1 == endPosition[1])) ||
+(startPosition[0] + 2 == endPosition[0] && (startPosition[1] - 1 == endPosition[1] || startPosition[1] + 1 == endPosition[1])) ||
+(startPosition[1] + 2 == endPosition[1] && (startPosition[0] - 1 == endPosition[0] || startPosition[0] + 1 == endPosition[0])) ||
+(startPosition[1] - 2 == endPosition[1] && (startPosition[0] - 1 == endPosition[0] || startPosition[0] + 1 == endPosition[0]));
 
             if (!legalMove) {
                 invalidMoves++;
