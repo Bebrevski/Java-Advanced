@@ -1,2 +1,2 @@
-# JS-Aplications
-Third course of JS Core module
+# Java-Advanced
+Java - SoftUni course. First part of Java Advanced module
